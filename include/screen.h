@@ -89,9 +89,9 @@ void printchr(char c) {
 				vidmem[(cur_y * SCREEN_WIDTH + cur_x) * SCREEN_DEPTH] = 0x00;
 			}
 			break;
-		case (0x09):
+		/*case (0x09):
 			cur_x = (cur_x + 8) & ~(8 - 1);
-			break;
+			break;*/
 		case ('\r'):
 			cur_x = 0;
 			break;

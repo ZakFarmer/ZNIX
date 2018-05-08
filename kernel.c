@@ -1,6 +1,19 @@
-#include "include/shell.h"
+#include "include/screen.h"
+#include "include/keyboard.h"
+#include "include/string.h"
 
 int kmain() {
 	clear_screen();
-	launch_shell();
+	while(1) {
+		printf("\nZNIX> ");
+
+		string str = read_string();
+		if (str_compare(str, "clear")) {
+			clear_screen();
+		} else {
+			printf("\nInvalid command.");
+		}
+
+		printf("\n");
+	}
 }
