@@ -116,7 +116,8 @@ void printchr(char c) {
 
 void printf(string str) {
 	uint16 i = 0;
-	for (i; i < strlen(str); i++) {
+	uint8 len = strlen(str) - 1;
+	for (i; i < len; i++) {
 		printchr(str[i]);
 	}
 }
