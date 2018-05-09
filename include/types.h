@@ -15,4 +15,7 @@ typedef unsigned short uint16;
 
 typedef char* string;
 
+#define low_16(address) (uint16)((address) & 0xFFFF)
+#define high_16(address) (uint16)(((address) >> 16) & 0xFFFF)
+
 #endif

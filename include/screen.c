@@ -90,7 +90,7 @@ void printchr(char c) {
 
 void printf(string str) {
 	uint16 i = 0;
-	uint8 len = strlen(str) - 1;
+	uint8 len = strlen(str);
 	for (i; i < len; i++) {
 		printchr(str[i]);
 	}
