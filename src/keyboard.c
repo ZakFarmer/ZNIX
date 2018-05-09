@@ -1,9 +1,14 @@
 #include "../include/keyboard.h"
 
-char get_scancode()
-{
-    while (!(inportb(0x64) & 1));
-    return inportb(0x60);
+char get_scancode() {
+    char chr = 0;
+    do {
+        if(inportb(0x60) != chr) {
+            chr = inportb(0x60);
+            if(chr > 0)
+                return chr;
+        }
+    } while(1);
 }
 
 /*char get_char() {
