@@ -14,7 +14,7 @@ void clear_line(uint8 fromLine, uint8 toLine) {
 }
 
 void clear_screen() {
-	clear_line(0, SCREEN_HEIGHT - 1);
+	clear_line(0, SCREEN_HEIGHT);
 	cur_x = 0;
 	cur_y = 0;
 	cur_update();
