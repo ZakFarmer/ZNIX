@@ -44,5 +44,6 @@ Simply follow one of the steps above to get a working development directory, the
 Any extra source files you make, remember to add rules for them to the Makefile if they need to be compiled/assembled/etc.
 
 Thanks for taking an interest in this project
-**___Zak___**
+
+*Zak*
 
