@@ -1,4 +1,4 @@
-#include "screen.h"
+#include "../include/screen.h"
 
 int cur_x = 0, cur_y = 0;
 const uint8 SCREEN_WIDTH = 80;

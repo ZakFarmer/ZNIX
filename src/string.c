@@ -1,4 +1,4 @@
-#include "string.h"
+#include "../include/string.h"
 
 uint16 strlen(string str) {
 	uint16 i = 1;

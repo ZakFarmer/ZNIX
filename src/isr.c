@@ -1,7 +1,7 @@
-#include "isr.h"
-#include "idt.h"
-#include "screen.h"
-#include "util.h"
+#include "../include/isr.h"
+#include "../include/idt.h"
+#include "../include/screen.h"
+#include "../include/util.h"
 
 void isr_install() {
 	set_idt_gate(0, (uint32)isr0);

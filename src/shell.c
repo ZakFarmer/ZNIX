@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "../include/shell.h"
 
 void launch_shell() {
 	printf("Launching ZNIX shell...\n\n");

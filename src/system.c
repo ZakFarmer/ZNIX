@@ -1,4 +1,4 @@
-#include "system.h"
+#include "../include/system.h"
 
 uint8 inportb (uint16 _port) {
 	uint8 rv;
