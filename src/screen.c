@@ -54,7 +54,7 @@ void new_line_check() {
 	}
 }
 
-void printchr(char c) {
+void printchr(char c, char colour) {
 	string vidmem = (string) 0xb8000;
 	switch (c){
 		case (0x08):
@@ -75,7 +75,7 @@ void printchr(char c) {
 			break;
 		default:
 			vidmem [((cur_y * SCREEN_WIDTH + cur_x)) * SCREEN_DEPTH] = c;
-			vidmem [((cur_y * SCREEN_WIDTH + cur_x)) * SCREEN_DEPTH + 1] = 0x0F;
+			vidmem [((cur_y * SCREEN_WIDTH + cur_x)) * SCREEN_DEPTH + 1] = colour;
 			cur_x++;
 			break;
 	}
@@ -88,10 +88,10 @@ void printchr(char c) {
 	cur_update();
 }
 
-void printf(string str) {
+void printf(string str, char colour) {
 	uint16 i = 0;
 	uint8 len = strlen(str);
 	for (i; i < len; i++) {
-		printchr(str[i]);
+		printchr(str[i], colour);
 	}
 }

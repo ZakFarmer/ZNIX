@@ -41,131 +41,131 @@ void isr_install() {
 }
 
 void isr0() {
-	printf(exception_messages[0]);
+	printf(exception_messages[0], LRED);
 	asm("hlt");
 }
 void isr1() {
-	printf(exception_messages[1]);
+	printf(exception_messages[1], LRED);
 	asm("hlt");
 }
 void isr2() {
-	printf(exception_messages[2]);
+	printf(exception_messages[2], LRED);
 	asm("hlt");
 }
 void isr3() {
-	printf(exception_messages[3]);
+	printf(exception_messages[3], LRED);
 	asm("hlt");
 }
 void isr4() {
-	printf(exception_messages[4]);
+	printf(exception_messages[4], LRED);
 	asm("hlt");
 }
 void isr5() {
-	printf(exception_messages[5]);
+	printf(exception_messages[5], LRED);
 	asm("hlt");
 }
 void isr6() {
-	printf(exception_messages[6]);
+	printf(exception_messages[6], LRED);
 	asm("hlt");
 }
 void isr7() {
-	printf(exception_messages[7]);
+	printf(exception_messages[7], LRED);
 	asm("hlt");
 }
 void isr8() {
-	printf(exception_messages[8]);
+	printf(exception_messages[8], LRED);
 	asm("hlt");
 }
 void isr9() {
-	printf(exception_messages[9]);
+	printf(exception_messages[9], LRED);
 	asm("hlt");
 }
 void isr10() {
-	printf(exception_messages[10]);
+	printf(exception_messages[10], LRED);
 	asm("hlt");
 }
 void isr11() {
-	printf(exception_messages[11]);
+	printf(exception_messages[11], LRED);
 	asm("hlt");
 }
 void isr12() {
-	printf(exception_messages[12]);
+	printf(exception_messages[12], LRED);
 	asm("hlt");
 }
 void isr13() {
-	printf(exception_messages[13]);
+	printf(exception_messages[13], LRED);
 	asm("hlt");
 }
 void isr14() {
-	printf(exception_messages[14]);
+	printf(exception_messages[14], LRED);
 	asm("hlt");
 }
 void isr15() {
-	printf(exception_messages[15]);
+	printf(exception_messages[15], LRED);
 	asm("hlt");
 }
 void isr16() {
-	printf(exception_messages[16]);
+	printf(exception_messages[16], LRED);
 	asm("hlt");
 }
 void isr17() {
-	printf(exception_messages[17]);
+	printf(exception_messages[17], LRED);
 	asm("hlt");
 }
 void isr18() {
-	printf(exception_messages[18]);
+	printf(exception_messages[18], LRED);
 	asm("hlt");
 }
 void isr19() {
-	printf(exception_messages[19]);
+	printf(exception_messages[19], LRED);
 	asm("hlt");
 }
 void isr20() {
-	printf(exception_messages[20]);
+	printf(exception_messages[20], LRED);
 	asm("hlt");
 }
 void isr21() {
-	printf(exception_messages[21]);
+	printf(exception_messages[21], LRED);
 	asm("hlt");
 }
 void isr22() {
-	printf(exception_messages[22]);
+	printf(exception_messages[22], LRED);
 	asm("hlt");
 }
 void isr23() {
-	printf(exception_messages[23]);
+	printf(exception_messages[23], LRED);
 	asm("hlt");
 }
 void isr24() {
-	printf(exception_messages[24]);
+	printf(exception_messages[24], LRED);
 	asm("hlt");
 }
 void isr25() {
-	printf(exception_messages[25]);
+	printf(exception_messages[25], LRED);
 	asm("hlt");
 }
 void isr26() {
-	printf(exception_messages[26]);
+	printf(exception_messages[26], LRED);
 	asm("hlt");
 }
 void isr27() {
-	printf(exception_messages[27]);
+	printf(exception_messages[27], LRED);
 	asm("hlt");
 }
 void isr28() {
-	printf(exception_messages[28]);
+	printf(exception_messages[28], LRED);
 	asm("hlt");
 }
 void isr29() {
-	printf(exception_messages[29]);
+	printf(exception_messages[29], LRED);
 	asm("hlt");
 }
 void isr30() {
-	printf(exception_messages[30]);
+	printf(exception_messages[30], LRED);
 	asm("hlt");
 }
 void isr31() {
-	printf(exception_messages[31]);
+	printf(exception_messages[31], LRED);
 	asm("hlt");
 }
 

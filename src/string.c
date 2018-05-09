@@ -19,3 +19,12 @@ uint8 str_compare(string str_1, string str_2) {
 
 	return 1;
 }
+
+uint8 char_in_array(char chr, char array[], uint8 arrayLength) {
+	for (int i = 0; i < arrayLength; i++) {
+		if (array[i] == chr) {
+			return 1;
+		}
+	}
+	return 0;
+}

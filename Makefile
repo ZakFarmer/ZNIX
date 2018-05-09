@@ -27,7 +27,7 @@ obj/kc.o:src/kernel.c
 obj/idt.o:src/idt.c
 	$(COMPILER) $(CFLAGS) src/idt.c -o obj/idt.o 
 
-obj/kb.o:src/kb.c
+obj/keyboard.o:src/keyboard.c
 	$(COMPILER) $(CFLAGS) src/keyboard.c -o obj/keyboard.o
 
 obj/isr.o:src/isr.c
