@@ -7,6 +7,9 @@
 
 class InterruptManager {
 	protected:
+
+		static InterruptManager* ActiveInterruptManager;
+
 		struct GateDescriptor
 		{
 			uint16_t handler_address_low_bits;
@@ -44,8 +47,10 @@ class InterruptManager {
 		~InterruptManager();
 
 		void activate();
+		void deactivate();
 
 		static uint32_t handle_interrupt(uint8_t interrupt_number, uint32_t esp);
+		uint32_t do_handle_interrupt(uint8_t interrupt_number, uint32_t esp);
 
 		static void ignore_interrupt_request();
 		static void handle_interrupt_request0x00();

@@ -29,7 +29,7 @@ kernel.iso: kernel.bin
 	rm -rf iso
 
 run: kernel.iso
-	qemu-system-x86_64 -cdrom kernel.iso
+	virtualbox --startvm ZNIX &
 
 install: kernel.bin
 	sudo cp $< /boot/kernel.bin

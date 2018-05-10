@@ -1,8 +1,10 @@
 #include "../include/interrupts.h"
 
-void printf(char* str);
+void printf(const char* str);
 
 InterruptManager::GateDescriptor InterruptManager::interrupt_descriptor_table[256];
+
+InterruptManager* InterruptManager::ActiveInterruptManager = 0;
 
 void InterruptManager::set_interrupt_descriptor_table_entry (
 	uint8_t interrupt_number,
@@ -64,22 +66,32 @@ InterruptManager::~InterruptManager() {
 }
 
 void InterruptManager::activate() {
+	if (ActiveInterruptManager != 0)
+		ActiveInterruptManager->deactivate();
+	ActiveInterruptManager = this;
 	asm("sti");
 }
 
+void InterruptManager::deactivate() {
+	if (ActiveInterruptManager == this) {
+		ActiveInterruptManager = 0;
+		asm("cli");
+	}
+}
+
 uint32_t InterruptManager::handle_interrupt(uint8_t interrupt_number, uint32_t esp) {
+	if (ActiveInterruptManager != 0) {
+		return ActiveInterruptManager->do_handle_interrupt(interrupt_number, esp);
+	}
 
 	printf("INTERRUPT");
 
 	return esp;
 }
 
-static void ignore_interrupt_request() {
+uint32_t InterruptManager::do_handle_interrupt(uint8_t interrupt_number, uint32_t esp) {
 
-}
-static void handle_interrupt_request0x00() {
+	printf("INTERRUPT");
 
-}
-static void handle_interrupt_request0x01() {
-
+	return esp;
 }
