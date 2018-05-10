@@ -1,6 +1,7 @@
 
 #include "include/types.h"
 #include "include/gdt.h"
+#include "include/interrupts.h"
 
 const uint8_t SCREEN_HEIGHT = 25, SCREEN_WIDTH = 80;
 
@@ -58,6 +59,9 @@ extern "C" void kernelMain(const void* multiboot_structure, uint32_t /*multiboot
     printf("Successfully booted.");
 
     GlobalDescriptorTable gdt;
+    InterruptManager interrupts(&gdt);
+
+    interrupts.activate();
 
     while(1);
 }

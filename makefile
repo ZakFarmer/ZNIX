@@ -2,7 +2,7 @@ GCCPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-excep
 ASPARAMS = --32
 LDPARAMS = -melf_i386
 
-objects = obj/loader.o obj/gdt.o obj/kernel.o obj/port.o
+objects = obj/loader.o obj/gdt.o obj/kernel.o obj/port.o obj/interrupts.o obj/interruptstubs.o
 
 obj/%.o: src/%.cpp
 	gcc $(GCCPARAMS) -c -o $@ $<
